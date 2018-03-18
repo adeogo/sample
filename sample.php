@@ -1,4 +1,8 @@
+
 <?php
+
+// script to calculate time ago
+
 	$strTimeAgo = ""; 
 	if(!empty($_POST["date-field"])) {
 		$strTimeAgo = timeago($_POST["date-field"]);
@@ -22,7 +26,7 @@
 	}
 	
 ?>
-<form name="frmTimeAgo" method="post">
+<form name="frmTimeAgo" method="post" id="timeForm">
 Enter Date: <input type="date" name="date-field" value="<?php if(!empty($_POST["date-field"])) { echo $_POST["date-field"]; } ?>"/>
 <input type="submit" name="submit-date" value="Submit Date" >
 </form>
